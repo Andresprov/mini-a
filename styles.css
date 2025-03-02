@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffccdd;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.banner {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #ff6699;
+    color: white;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+h1 {
+    margin-top: 100px;
+    font-size: 28px;
+    color: #333;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 10.0s;
+}
+
+#yes-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#yes-button:hover {
+    background-color: #45a049;
+}
+
+#no-button {
+    background-color: #f44336;
+    color: white;
+}
+
+#no-button:hover {
+    background-color: #d32f2f;
+}
+
+#response-text {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        font-size: 18px;
+        padding: 15px;
+    }
+    .slideshow-container {
+        width: 90%;
+        margin-top: 60px;
+    }
+    .pixel-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .prev, .next {
+        font-size: 18px;
+        padding: 8px;
+    }
+    .pixel-text {
+        font-size: 16px;
+    }
+}
+

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffccdd;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Cambiado para acomodar el banner */
+    align-items: center;
+    min-height: 120vh; /* Aumenta el tamaño del body */
+    overflow-x: hidden; /* Evita desbordamiento horizontal */
+}
+
+.banner {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #ff6699;
+    color: white;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px; /* Definir altura fija para el banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 100px; /* Ajuste para no sobrepasar el banner */
+    padding-bottom: 20px; /* Espacio adicional */
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+
+/* Ajustar imágenes y videos */
+img, video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* Limita la altura */
+    border-radius: 10px;
+}
+
+.text {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.pixel-text {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 3px 3px 0px black;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* Estilos Responsive */
+@media (max-width: 768px) {
+    .banner {
+        font-size: 18px;
+        padding: 15px;
+        height: 70px;
+    }
+    .slideshow-container {
+        width: 90%;
+        margin-top: 90px;
+    }
+    img, video {
+        max-height: 300px;
+    }
+    .pixel-text {
+        font-size: 18px;
+    }
+    .prev, .next {
+        font-size: 20px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        font-size: 16px;
+        padding: 10px;
+        height: 60px;
+    }
+    .prev, .next {
+        font-size: 16px;
+        padding: 6px;
+    }
+    .pixel-text {
+        font-size: 16px;
+    }
+    img, video {
+        max-height: 250px;
+    }
+}
